@@ -139,20 +139,18 @@ button {
     height: 23px;
     color: var(--stats-item-text);
     font-size: 0.9rem;
-  
+
     .number {
       font-size: 1.1rem;
       font-weight: 500;
     }
-  
+
     .number.skeleton {
       width: 100%;
-      background: linear-gradient(
-        90deg,
-        var(--skeleton) 0%,
-        var(--zap-stats-skeleton-bg) 50%,
-        var(--skeleton) 100%
-      );
+      background: linear-gradient(90deg,
+          var(--skeleton) 0%,
+          var(--zap-stats-skeleton-bg) 50%,
+          var(--skeleton) 100%);
       background-size: 200% 100%;
     }
   }
@@ -381,12 +379,10 @@ button {
 .skeleton {
   color: transparent;
   border-radius: 2px;
-  background: linear-gradient(
-    90deg,
-    var(--skeleton) 0%,
-    var(--skeleton2) 50%,
-    var(--skeleton) 100%
-  );
+  background: linear-gradient(90deg,
+      var(--skeleton) 0%,
+      var(--skeleton2) 50%,
+      var(--skeleton) 100%);
   background-size: 200% 100%;
   animation: loading-animation 3.5s infinite;
   opacity: 0.7;
@@ -396,6 +392,7 @@ button {
   0% {
     background-position: 200% 0;
   }
+
   100% {
     background-position: -200% 0;
   }
@@ -452,6 +449,7 @@ button {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
