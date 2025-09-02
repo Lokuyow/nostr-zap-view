@@ -1,6 +1,6 @@
-import { 
-  APP_CONFIG, 
-  ViewerConfig 
+import {
+  APP_CONFIG,
+  ViewerConfig
 } from "./AppSettings.js";
 import {
   createDialog,
@@ -42,7 +42,7 @@ async function handleButtonClick(button, viewId) {
 
     subscriptionManager.setViewConfig(viewId, config);
     const dialog = await createDialog(viewId, config);
-    
+
     if (!dialog) {
       throw new Error(APP_CONFIG.ZAP_CONFIG.ERRORS.DIALOG_NOT_FOUND);
     }
@@ -76,7 +76,7 @@ function initializeApp() {
 
   document.querySelectorAll("button[data-nzv-id]").forEach((button, index) => {
     if (button.hasAttribute("data-zap-view-id")) return;
-    
+
     const viewId = `nostr-zap-view-${index}`;
     button.setAttribute("data-zap-view-id", viewId);
 
@@ -90,7 +90,7 @@ function initializeApp() {
 }
 
 if (typeof window !== 'undefined') {
-  document.addEventListener("DOMContentLoaded", initializeApp); 
+  document.addEventListener("DOMContentLoaded", initializeApp);
 }
 
 // Export all the modules and classes that are declared in the type definitions
@@ -105,7 +105,7 @@ export { cacheManager } from "./CacheManager.js";
 export function initialize(options = {}) {
   // カスタム設定のマージ
   Object.assign(APP_CONFIG, options);
-  
+
   if (typeof window !== 'undefined') {
     initializeApp();
   }
