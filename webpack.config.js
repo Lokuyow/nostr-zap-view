@@ -52,7 +52,7 @@ module.exports = [
     plugins: [
       new CopyPlugin({
         patterns: [
-          { from: "src/types", to: "types" }
+          { from: "src/types/index.d.ts", to: "index.d.ts" }
         ],
       }),
     ],
@@ -109,7 +109,7 @@ module.exports = [
     plugins: [
       new CopyPlugin({
         patterns: [
-          { from: "src/types", to: "types" }
+          { from: "src/types/index.d.ts", to: "index.d.ts" }
         ],
       }),
     ],

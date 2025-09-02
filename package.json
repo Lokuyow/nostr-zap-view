@@ -4,10 +4,10 @@
   "description": "View any nostr npub or note zaps from anywhere.",
   "main": "./dist/nostr-zap-view.js",
   "module": "./dist/nostr-zap-view.esm.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/nostr-zap-view.esm.js",
       "require": "./dist/nostr-zap-view.js"
     }
