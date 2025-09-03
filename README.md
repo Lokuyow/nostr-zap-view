@@ -29,10 +29,16 @@ Add this script tag right before the bottom closing body tag.
 <script src="https://cdn.jsdelivr.net/npm/nostr-zap-view@1"></script>
 ```
 
-## Related repository
-- [nostr-zap](https://github.com/SamSamskies/nostr-zap) ![stars](https://img.shields.io/github/stars/SamSamskies/nostr-zap.svg?style=social) - Zap any Nostr npub or note from anywhere.
-
 ## Usage in Svelte
+
+First, install from npm:
+
+```sh
+npm i nostr-zap-view
+```
+
+Then use in your Svelte component:
+
 ```svelte
 <script lang="ts">
     import { onMount, tick } from "svelte";
@@ -56,3 +62,6 @@ Add this script tag right before the bottom closing body tag.
   View
 </button>
 ```
+
+## Related repository
+- [nostr-zap](https://github.com/SamSamskies/nostr-zap) ![stars](https://img.shields.io/github/stars/SamSamskies/nostr-zap.svg?style=social) - Zap any Nostr npub or note from anywhere.
