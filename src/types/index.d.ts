@@ -43,4 +43,5 @@ declare module 'nostr-zap-view' {
   export const statsManager: StatsManager;
 
   export function initialize(options?: Record<string, any>): void;
+  export function nostrZapView(options?: Record<string, any>): void;
 }

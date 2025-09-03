@@ -31,3 +31,28 @@ Add this script tag right before the bottom closing body tag.
 
 ## Related repository
 - [nostr-zap](https://github.com/SamSamskies/nostr-zap) ![stars](https://img.shields.io/github/stars/SamSamskies/nostr-zap.svg?style=social) - Zap any Nostr npub or note from anywhere.
+
+## Usage in Svelte
+```svelte
+<script lang="ts">
+    import { onMount, tick } from "svelte";
+    import { nostrZapView } from "nostr-zap-view";
+
+    export let show = false;
+
+    $: if (show) {
+        (async () => {
+            await tick();
+            nostrZapView();
+        })();
+    }
+</script>
+
+<button
+  data-title=""
+  data-nzv-id="naddr1..."
+  data-zap-color-mode="true"
+  data-relay-urls="wss://relay.example.com">
+  View
+</button>
+```
