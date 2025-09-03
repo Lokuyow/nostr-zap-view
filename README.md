@@ -41,7 +41,7 @@ Then use in your Svelte component:
 
 ```svelte
 <script lang="ts">
-    import { onMount, tick } from "svelte";
+    import { tick } from "svelte";
     import { nostrZapView } from "nostr-zap-view";
 
     export let show = false;
