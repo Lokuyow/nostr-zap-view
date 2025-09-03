@@ -37,8 +37,22 @@ First, install from npm:
 npm i nostr-zap-view
 ```
 
-Then use in your Svelte component:
+Then use in your Svelte component
 
+If the button is displayed by default:
+```svelte
+<script lang="ts">
+  import { onMount } from "svelte";
+  import { nostrZapView } from "nostr-zap-view";
+  import "nostr-zap";
+
+  onMount(() => {
+    nostrZapView();
+  });
+</script>
+```
+
+When buttons appear or disappear in dialogs:
 ```svelte
 <script lang="ts">
     import { tick } from "svelte";
@@ -53,14 +67,6 @@ Then use in your Svelte component:
         })();
     }
 </script>
-
-<button
-  data-title=""
-  data-nzv-id="naddr1..."
-  data-zap-color-mode="true"
-  data-relay-urls="wss://relay.example.com">
-  View
-</button>
 ```
 
 ## Related repository
